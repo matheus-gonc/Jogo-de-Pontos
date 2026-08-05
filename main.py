@@ -25,15 +25,10 @@ for i in range(linhas):
         linha.append(numero)
     matriz.append(linha)
 
+#  contando a quantidade de vezes que os numeros aparecem 
 for i in range(linhas):
     for j in range(colunas):
         dicionario_de_numeros[matriz[i][j]] += 1
-
-
-
-
-
-
 
 
 for i in matriz:
