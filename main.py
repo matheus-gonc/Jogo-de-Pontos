@@ -34,3 +34,6 @@ for i in range(linhas):
 for i in matriz:
     print(i)
 print('\n', dicionario_de_numeros)
+
+for chave in dicionario_de_numeros:
+    print(f'O número {chave} aparece {dicionario_de_numeros[chave]} vezes')
