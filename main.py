@@ -17,6 +17,8 @@ dicionario_de_letras = {
 }
 lista_de_letras = list(dicionario_de_letras.keys())
 
+pontos_por_letras = []
+
 # gerar a matriz e colocar números aleatórios nela
 for i in range(linhas):
     linha = []
@@ -36,3 +38,20 @@ print('\n', dicionario_de_letras)
 
 for chave in dicionario_de_letras:   # MOSTRANDO QUANTAS VEZES AS LETRAS APARECEM 
     print(f'A letra {chave} aparece {dicionario_de_letras[chave][0]} vezes')
+
+    ocorrencia = dicionario_de_letras[chave][0]
+    if ocorrencia >= 7:
+        pontuacao = ocorrencia * dicionario_de_letras[chave][3]
+    elif ocorrencia == 6:
+        pontuacao = ocorrencia * dicionario_de_letras[chave][2]
+    elif ocorrencia == 5:
+        pontuacao = ocorrencia * dicionario_de_letras[chave][1]
+    else:
+        pontuacao = 0
+    pontos_por_letras.append(pontuacao)
+print(pontos_por_letras)
+
+total_pontos = 0
+for i in pontos_por_letras:
+    total_pontos += i
+print(total_pontos)
