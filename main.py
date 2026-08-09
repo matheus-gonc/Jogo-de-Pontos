@@ -4,36 +4,36 @@ linhas = 5
 colunas = 6
 matriz = []
 
-dicionario_de_numeros = {
-    '1': 0,
-    '2': 0,
-    '3': 0,
-    '4': 0,
-    '5': 0,
-    '6': 0,
-    '7': 0,
-    '8': 0,
-    '9': 0,
+dicionario_de_letras = {
+    'A': 0,
+    'B': 0,
+    'C': 0,
+    'D': 0,
+    'E': 0,
+    'F': 0,
+    'G': 0,
+    'H': 0,
+    'I': 0,
 }
-lista_de_numeros = list(dicionario_de_numeros.keys())
+lista_de_letras = list(dicionario_de_letras.keys())
 
 # gerar a matriz e colocar números aleatórios nela
 for i in range(linhas):
     linha = []
     for j in range(colunas):
-        numero = random.choice(lista_de_numeros)
+        numero = random.choice(lista_de_letras)
         linha.append(numero)
     matriz.append(linha)
 
 #  contando a quantidade de vezes que os numeros aparecem 
 for i in range(linhas):
     for j in range(colunas):
-        dicionario_de_numeros[matriz[i][j]] += 1
+        dicionario_de_letras[matriz[i][j]] += 1
 
 
 for i in matriz:
     print(i)
-print('\n', dicionario_de_numeros)
+print('\n', dicionario_de_letras)
 
-for chave in dicionario_de_numeros:
-    print(f'O número {chave} aparece {dicionario_de_numeros[chave]} vezes')
+for chave in dicionario_de_letras:   # MOSTRANDO QUANTAS VEZES AS LETRAS APARECEM 
+    print(f'A letra {chave} aparece {dicionario_de_letras[chave]} vezes')
