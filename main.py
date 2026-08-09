@@ -5,15 +5,15 @@ colunas = 6
 matriz = []
 
 dicionario_de_letras = {
-    'A': [0, 0.25, 0.75, 2],
-    'B': [0, 0.4, 0.9, 4],
-    'C': [0, 0.5, 1, 5],
-    'D': [0, 0.8, 1.2, 8],
+    'I': [0, 0.25, 0.75, 2],
+    'H': [0, 0.4, 0.9, 4],
+    'G': [0, 0.5, 1, 5],
+    'F': [0, 0.8, 1.2, 8],
     'E': [0, 1, 1.5, 10],
-    'F': [0, 1.5, 2, 12],
-    'G': [0, 2, 5, 15],
-    'H': [0, 2.5, 10, 25],
-    'I': [0, 10, 25, 50 ],
+    'D': [0, 1.5, 2, 12],
+    'C': [0, 2, 5, 15],
+    'B': [0, 2.5, 10, 25],
+    'A': [0, 10, 25, 50 ],
 }
 lista_de_letras = list(dicionario_de_letras.keys())
 
@@ -51,7 +51,7 @@ for chave in dicionario_de_letras:   # MOSTRANDO QUANTAS VEZES AS LETRAS APARECE
     pontos_por_letras.append(pontuacao)
 print(pontos_por_letras)
 
-total_pontos = 0
+total_pontos_rodada = 0
 for i in pontos_por_letras:
-    total_pontos += i
-print(total_pontos)
+    total_pontos_rodada += i
+print(total_pontos_rodada)
