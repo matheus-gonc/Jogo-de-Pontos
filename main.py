@@ -3,9 +3,11 @@ import random
 pontuacao_total = 0
 lista_de_pontos_final = []
 
-for l in range(10):
-    linhas = 5
-    colunas = 6
+linhas = 5
+colunas = 6
+
+rodadas = 1
+while rodadas <= 10:
     matriz = []
 
     dicionario_de_letras = {
@@ -23,7 +25,7 @@ for l in range(10):
 
     lista_de_pontos_rodada = []
 
-    # gerar a matriz e colocar números aleatórios nela
+    # gera a matriz e colocar letras aleatórias nela
     for i in range(linhas):
         linha = []
         for j in range(colunas):
@@ -31,14 +33,15 @@ for l in range(10):
             linha.append(numero)
         matriz.append(linha)
 
-    #  contando a quantidade de vezes que os numeros aparecem 
+    #  contando a quantidade de vezes que as letras aparecem 
     for i in range(linhas):
         for j in range(colunas):
             dicionario_de_letras[matriz[i][j]][0] += 1
 
     # mostro a matriz gerada
-    for i in matriz:
-        print(i)
+    print(f'======= RODADA {rodadas} DE 10 =======')
+    for letra in matriz:
+        print(letra)
 
     # realizando o cálculo de ocorrencia de cada letra e sua pontuação de acordo com a tabela de pontos
     for chave in dicionario_de_letras: 
@@ -60,11 +63,16 @@ for l in range(10):
     for pontos in lista_de_pontos_rodada:
         total_pontos_rodada += pontos
 
-    print(f'Pontuação da rodada: {total_pontos_rodada}\n')
+    print(f'Pontuação da rodada: {total_pontos_rodada:.2f}')
 
     lista_de_pontos_final.append(total_pontos_rodada)
+
+    nova_rodada = input('Pressione "p" para a proxima rodada: ').lower()
+    if nova_rodada == 'p':
+        rodadas += 1 # mudando as rodadas
+    print()
 
 for i in lista_de_pontos_final:
     pontuacao_total += i
 
-print(f'\nPontuação final: {pontuacao_total}')
+print(f'\nPontuação final: {pontuacao_total:.2f}')
