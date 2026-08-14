@@ -2,10 +2,10 @@ import random
 from collections import Counter
 
 # 1. Definir a lista de strings
-participantes = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']
+participantes = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', '#']
 
 # 2. Definir a quantidade de simulações
-total_simulacoes = 10
+total_simulacoes = 10000000
 
 # 3. Executar o sorteio aleatório 100 vezes
 resultados = [random.choice(participantes) for _ in range(total_simulacoes)]
