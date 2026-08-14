@@ -19,7 +19,8 @@ while rodadas <= 10:
         'D': [0, 1.5, 2, 12],
         'C': [0, 2, 5, 15],
         'B': [0, 2.5, 10, 25],
-        'A': [0, 10, 25, 50 ],
+        'A': [0, 10, 25, 50],
+        '#': [0, 25]
     }
     lista_de_letras = list(dicionario_de_letras.keys())
 
@@ -43,10 +44,10 @@ while rodadas <= 10:
     for letra in matriz:
         print(letra)
 
-    # realizando o cálculo de ocorrencia de cada letra e sua pontuação de acordo com a tabela de pontos
+    # realizando o cálculo de ocorrencia de cada letra e sua pontuação de acordo com sua frequência com bsae na tabela de pontos, sem considerar o # (ele é o multiplicador de pontos)
     for chave in dicionario_de_letras: 
-        # MOSTRANDO QUANTAS VEZES AS LETRAS APARECEM   
-        #print(f'A letra {chave} aparece {dicionario_de_letras[chave][0]} vezes')
+        # MOSTRANDO QUANTAS VEZES AS LETRAS APARECEM
+        print(f'A letra {chave} aparece {dicionario_de_letras[chave][0]} vezes')
 
         ocorrencia = dicionario_de_letras[chave][0]
         if ocorrencia >= 7:
@@ -59,9 +60,17 @@ while rodadas <= 10:
             pontuacao = 0
         lista_de_pontos_rodada.append(pontuacao)
 
+    if dicionario_de_letras['#'][0] > 0:
+        multiplicador = dicionario_de_letras['#'][1] * dicionario_de_letras['#'][0]
+    else:
+        multiplicador = 1 #nesse momento o jogo está com a contagem de pontuação errada
+
+
     total_pontos_rodada = 0
     for pontos in lista_de_pontos_rodada:
         total_pontos_rodada += pontos
+    total_pontos_rodada = total_pontos_rodada * multiplicador
+        
 
     print(f'Pontuação da rodada: {total_pontos_rodada:.2f}')
 
