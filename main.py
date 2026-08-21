@@ -20,7 +20,7 @@ while rodadas <= 10:
         'C': [0, 2, 5, 15],
         'B': [0, 2.5, 10, 25],
         'A': [0, 10, 25, 50],
-        '#': [0, 25]
+        '#': [0, 4]
     }
     lista_de_letras = list(dicionario_de_letras.keys())
 
@@ -34,7 +34,7 @@ while rodadas <= 10:
             linha.append(numero)
         matriz.append(linha)
 
-    #  contando a quantidade de vezes que as letras aparecem 
+    # contando a quantidade de vezes que as letras aparecem 
     for i in range(linhas):
         for j in range(colunas):
             dicionario_de_letras[matriz[i][j]][0] += 1
@@ -50,7 +50,10 @@ while rodadas <= 10:
         print(f'A letra {chave} aparece {dicionario_de_letras[chave][0]} vezes')
 
         ocorrencia = dicionario_de_letras[chave][0]
-        if ocorrencia >= 7:
+
+        if chave == '#':
+            break
+        elif ocorrencia >= 7:
             pontuacao = ocorrencia * dicionario_de_letras[chave][3]
         elif ocorrencia == 6:
             pontuacao = ocorrencia * dicionario_de_letras[chave][2]
@@ -63,7 +66,7 @@ while rodadas <= 10:
     if dicionario_de_letras['#'][0] > 0:
         multiplicador = dicionario_de_letras['#'][1] * dicionario_de_letras['#'][0]
     else:
-        multiplicador = 1 #nesse momento o jogo está com a contagem de pontuação errada
+        multiplicador = 1
 
 
     total_pontos_rodada = 0
@@ -76,8 +79,8 @@ while rodadas <= 10:
 
     lista_de_pontos_final.append(total_pontos_rodada)
 
-    nova_rodada = input('Pressione "p" para a proxima rodada: ').lower()
-    if nova_rodada == 'p':
+    nova_rodada = input('Pressione [space] para a proxima rodada: ').lower()
+    if nova_rodada.isspace():
         rodadas += 1 # mudando as rodadas
     print()
 
