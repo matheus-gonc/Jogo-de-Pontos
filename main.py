@@ -20,7 +20,7 @@ while rodadas <= 10:
         'C': [0, 2, 5, 15],
         'B': [0, 2.5, 10, 25],
         'A': [0, 10, 25, 50],
-        '#': [0, 4]
+        '#': [0, 2]
     }
     lista_de_letras = list(dicionario_de_letras.keys())
 
@@ -47,7 +47,7 @@ while rodadas <= 10:
     # realizando o cálculo de ocorrencia de cada letra e sua pontuação de acordo com sua frequência com bsae na tabela de pontos, sem considerar o # (ele é o multiplicador de pontos)
     for chave in dicionario_de_letras: 
         # MOSTRANDO QUANTAS VEZES AS LETRAS APARECEM
-        print(f'A letra {chave} aparece {dicionario_de_letras[chave][0]} vezes')
+        #print(f'A letra {chave} aparece {dicionario_de_letras[chave][0]} vezes')
 
         ocorrencia = dicionario_de_letras[chave][0]
 
@@ -82,6 +82,14 @@ while rodadas <= 10:
     nova_rodada = input('Pressione [space] para a proxima rodada: ').lower()
     if nova_rodada.isspace():
         rodadas += 1 # mudando as rodadas
+    else:
+        while nova_rodada.isspace() == False:
+            nova_rodada = input('Pressione [space] para a proxima rodada: ').lower()
+            if nova_rodada.isspace():
+                rodadas += 1
+                break
+
+    
     print()
 
 for i in lista_de_pontos_final:
