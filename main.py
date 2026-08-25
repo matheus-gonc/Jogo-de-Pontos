@@ -44,7 +44,7 @@ while rodadas <= 10:
     for letra in matriz:
         print(letra)
 
-    # realizando o cálculo de ocorrencia de cada letra e sua pontuação de acordo com sua frequência com bsae na tabela de pontos, sem considerar o # (ele é o multiplicador de pontos)
+    # realizo o cálculo de ocorrencia de cada letra e sua pontuação de acordo com sua frequência com bsae na tabela de pontos, sem considerar o # (ele é o multiplicador de pontos)
     for chave in dicionario_de_letras: 
         # MOSTRANDO QUANTAS VEZES AS LETRAS APARECEM
         #print(f'A letra {chave} aparece {dicionario_de_letras[chave][0]} vezes')
@@ -79,17 +79,15 @@ while rodadas <= 10:
 
     lista_de_pontos_final.append(total_pontos_rodada)
 
-    nova_rodada = input('Pressione [space] para a proxima rodada: ').lower()
-    if nova_rodada.isspace():
+    nova_rodada = input('Pressione [Enter] para a proxima rodada: ') #string vazia retorna falso em python
+    if nova_rodada == '':
         rodadas += 1 # mudando as rodadas
     else:
-        while nova_rodada.isspace() == False:
-            nova_rodada = input('Pressione [space] para a proxima rodada: ').lower()
-            if nova_rodada.isspace():
+        while nova_rodada != '':
+            nova_rodada = input('Pressione [Enter] para a proxima rodada: ')
+            if nova_rodada == '':
                 rodadas += 1
-                break
 
-    
     print()
 
 for i in lista_de_pontos_final:
