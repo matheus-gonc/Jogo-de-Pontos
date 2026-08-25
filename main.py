@@ -80,12 +80,12 @@ while rodadas <= 10:
     lista_de_pontos_final.append(total_pontos_rodada)
 
     nova_rodada = input('Pressione [Enter] para a proxima rodada: ') #string vazia retorna falso em python
-    if nova_rodada == '':
+    if not nova_rodada:
         rodadas += 1 # mudando as rodadas
     else:
-        while nova_rodada != '':
+        while nova_rodada:
             nova_rodada = input('Pressione [Enter] para a proxima rodada: ')
-            if nova_rodada == '':
+            if not nova_rodada:
                 rodadas += 1
 
     print()
