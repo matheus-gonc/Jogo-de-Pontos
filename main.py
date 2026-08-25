@@ -73,7 +73,7 @@ while rodadas <= 10:
     for pontos in lista_de_pontos_rodada:
         total_pontos_rodada += pontos
     total_pontos_rodada = total_pontos_rodada * multiplicador
-        
+    
 
     print(f'Pontuação da rodada: {total_pontos_rodada:.2f}')
 
