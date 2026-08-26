@@ -68,13 +68,8 @@ while rodadas <= 10:
     else:
         multiplicador = 1
 
-
-    total_pontos_rodada = 0
-    for pontos in lista_de_pontos_rodada:
-        total_pontos_rodada += pontos
-    total_pontos_rodada = total_pontos_rodada * multiplicador
+    total_pontos_rodada = sum(lista_de_pontos_rodada) * multiplicador
     
-
     print(f'Pontuação da rodada: {total_pontos_rodada:.2f}')
 
     lista_de_pontos_final.append(total_pontos_rodada)
