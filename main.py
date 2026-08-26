@@ -24,8 +24,6 @@ while rodada <= 10:
     }
     lista_de_letras = list(dicionario_de_letras.keys())
 
-    lista_de_pontos_rodada = []
-
     # gera a matriz e colocar letras aleatórias nela
     for i in range(linhas):
         linha = []
@@ -43,6 +41,8 @@ while rodada <= 10:
     print(f'======= RODADA {rodada} DE 10 =======')
     for letra in matriz:
         print(letra)
+
+    lista_de_pontos_rodada = []
 
     # realizo o cálculo de ocorrencia de cada letra e sua pontuação de acordo com sua frequência com bsae na tabela de pontos, sem considerar o # (ele é o multiplicador de pontos)
     for chave in dicionario_de_letras: 
