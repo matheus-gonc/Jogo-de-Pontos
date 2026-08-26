@@ -30,8 +30,8 @@ while rodadas <= 10:
     for i in range(linhas):
         linha = []
         for j in range(colunas):
-            numero = random.choice(lista_de_letras)
-            linha.append(numero)
+            letra = random.choice(lista_de_letras)
+            linha.append(letra)
         matriz.append(linha)
 
     # contando a quantidade de vezes que as letras aparecem 
