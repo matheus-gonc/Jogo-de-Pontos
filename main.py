@@ -6,8 +6,8 @@ lista_de_pontos_final = []
 linhas = 5
 colunas = 6
 
-rodadas = 1
-while rodadas <= 10:
+rodada = 1
+while rodada <= 10:
     matriz = []
 
     dicionario_de_letras = {
@@ -40,7 +40,7 @@ while rodadas <= 10:
             dicionario_de_letras[matriz[i][j]][0] += 1
 
     # mostro a matriz gerada
-    print(f'======= RODADA {rodadas} DE 10 =======')
+    print(f'======= RODADA {rodada} DE 10 =======')
     for letra in matriz:
         print(letra)
 
@@ -76,12 +76,12 @@ while rodadas <= 10:
 
     nova_rodada = input('Pressione [Enter] para a proxima rodada: ') #string vazia retorna falso em python
     if not nova_rodada:
-        rodadas += 1 # mudando as rodadas
+        rodada += 1 # mudando as rodadas
     else:
         while nova_rodada:
             nova_rodada = input('Pressione [Enter] para a proxima rodada: ')
             if not nova_rodada:
-                rodadas += 1
+                rodada += 1
 
     print()
 
