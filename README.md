@@ -1,7 +1,7 @@
 # 🎰 Jogo de Matrizes e Pontuação em Python
 
 ## 🎯 Objetivo do Projeto
-Este projeto foi desenvolvido com o objetivo principal de reforçar a minha lógica de programação através da aplicação prática e manipulação de diferentes estruturas de dados. O arquivo `funcoes.py` guarda as configurações e regras, enquanto o `main.py` executa o programa.
+Este projeto foi desenvolvido com o objetivo principal de reforçar a minha lógica de programação através da aplicação prática e manipulação de diferentes estruturas de dados. O arquivo `funcoes.py` guarda as configurações e regras, enquanto o `main.py` executa o programa. Também coloquei em prática meus conhecimentos de versionamento de código usando Git e criando novas branches de acordo com a criação das funcionalidades
 
 ## ⚙️ Como o Código Funciona
 O algoritmo simula um jogo de sorteio baseado em grade (semelhante a uma *slot machine*), que ocorre ao longo de **10 rodadas**. 
